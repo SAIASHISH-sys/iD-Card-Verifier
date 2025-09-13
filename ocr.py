@@ -4,7 +4,6 @@ OCR PDF Text Extraction Script
 Extracts text elements from PDF and outputs as JSON
 """
 
-
 import cv2
 import pytesseract
 import fitz  # PyMuPDF
@@ -17,20 +16,28 @@ from PIL import Image
 
 # --- PDF & Tesseract Setup ---
 
-# Get the only file from uploads directory
-uploads_dir = "uploads"
-if not os.path.exists(uploads_dir):
-    print(f"Error: {uploads_dir} directory not found!")
-    sys.exit(1)
+# Check if file path is provided as argument
+if len(sys.argv) > 1:
+    file_path = sys.argv[1]
+    if not os.path.exists(file_path):
+        print(f"Error: File {file_path} not found!")
+        sys.exit(1)
+else:
+    # Fallback to uploads directory scanning (for backward compatibility)
+    uploads_dir = "uploads"
+    if not os.path.exists(uploads_dir):
+        print(f"Error: {uploads_dir} directory not found!")
+        sys.exit(1)
 
-files = [f for f in os.listdir(uploads_dir) if os.path.isfile(os.path.join(uploads_dir, f))]
-if not files:
-    print(f"Error: No files found in {uploads_dir} directory!")
-    sys.exit(1)
-if len(files) > 1:
-    print(f"Warning: Multiple files found in {uploads_dir}. Using the first one: {files[0]}")
+    files = [f for f in os.listdir(uploads_dir) if os.path.isfile(os.path.join(uploads_dir, f))]
+    if not files:
+        print(f"Error: No files found in {uploads_dir} directory!")
+        sys.exit(1)
+    if len(files) > 1:
+        print(f"Warning: Multiple files found in {uploads_dir}. Using the first one: {files[0]}")
 
-file_path = os.path.join(uploads_dir, files[0])
+    file_path = os.path.join(uploads_dir, files[0])
+
 print(f"Processing file: {file_path}")
 
 # If input is a JPG/JPEG/PNG, convert to PDF
@@ -210,12 +217,12 @@ if not grouped:
     verification_result["verified"] = False
     verification_result["document_type"] = "NOT_VERIFIED"
 
-# Optionally save to file
-output_file = f"{os.path.splitext(file_path)[0]}_ocr_results.json"
+# Optionally save to file in uploads directory
+base_filename = os.path.basename(os.path.splitext(file_path)[0])
+output_file = os.path.join("uploads", f"{base_filename}_ocr_results.json")
 with open(output_file, 'w', encoding='utf-8') as f:
     json.dump(result, f, indent=2, ensure_ascii=False)
 
-# Output final JSON result to stdout
-#print(json.dumps(result, indent=2, ensure_ascii=False))
+print(f"OCR results saved to: {output_file}")
 
 pdf_document.close()

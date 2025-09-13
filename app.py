@@ -43,10 +43,7 @@ def run_ocr_processing(filepath):
         )
         if result.returncode != 0:
             return None, f"OCR failed: {result.stderr}"
-        try:
-            return json.loads(result.stdout), None
-        except json.JSONDecodeError as e:
-            return None, f"JSON parse error: {e}"
+        return True, None  # Return success, no need to parse JSON here
     except Exception as e:
         return None, str(e)
 
@@ -94,11 +91,25 @@ def process_ocr():
     if not os.path.exists(filepath):
         return jsonify({'error': 'File not found'}), 404
 
-    ocr_data, error = run_ocr_processing(filepath)
+    # Run OCR processing
+    _, error = run_ocr_processing(filepath)
     if error:
         return jsonify({'success': False, 'error': error}), 500
     
-    return jsonify({'success': True, 'data': ocr_data})
+    # Get the OCR results from the JSON file created in uploads folder
+    base_filename = os.path.splitext(filename)[0]
+    ocr_json_filename = f"{base_filename}_ocr_results.json"
+    ocr_json_filepath = os.path.join(UPLOAD_FOLDER, ocr_json_filename)
+    
+    if not os.path.exists(ocr_json_filepath):
+        return jsonify({'success': False, 'error': 'OCR results file not found'}), 500
+    
+    try:
+        with open(ocr_json_filepath, 'r', encoding='utf-8') as f:
+            ocr_data = json.load(f)
+        return jsonify({'success': True, 'data': ocr_data})
+    except Exception as e:
+        return jsonify({'success': False, 'error': f'Failed to read OCR results: {str(e)}'}), 500
 
 @app.route('/uploads/<filename>')
 def get_file(filename):
