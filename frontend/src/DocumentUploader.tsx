@@ -5,39 +5,71 @@ export default function DocumentUploader() {
   const [selectedOption, setSelectedOption] = useState<string>(""); // Student ID, PAN, Aadhar
   const [file, setFile] = useState<File | null>(null);
   const [uploadedUrl, setUploadedUrl] = useState<string | null>(null);
+  const [filename, setFilename] = useState<string | null>(null); // store filename separately
   const [error, setError] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
+  const [verifying, setVerifying] = useState<boolean>(false);
   const [ocrResult, setOcrResult] = useState<any>(null);
 
-  // Upload and process function
-  async function uploadAndProcessFile(file: File, option: string) {
+  // Upload function
+  async function uploadFile(file: File, option: string) {
     setLoading(true);
     const formData = new FormData();
     formData.append("file", file);
     formData.append("type", option); // sending the type to backend
 
     try {
-      const res = await fetch("http://localhost:5000/upload-and-process", {
+      const res = await fetch("http://localhost:5001/upload", {
         method: "POST",
         body: formData,
       });
 
-      if (!res.ok) throw new Error("Upload and processing failed");
+      if (!res.ok) throw new Error("Upload failed");
       const data = await res.json();
-      console.log("Upload and OCR result:", data);
+      console.log("Uploaded file URL:", data.fileUrl);
+      setUploadedUrl(data.fileUrl);
+      setFilename(data.filename);
+      setError("");
+    } catch (err) {
+      console.error(err);
+      setError("Upload failed");
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  // Verify function
+  async function verifyDocument() {
+    if (!filename) {
+      setError("Please upload a file first");
+      return;
+    }
+
+    setVerifying(true);
+    setError("");
+    
+    try {
+      const res = await fetch("http://localhost:5001/process-ocr", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ filename, type: selectedOption }),
+      });
+
+      if (!res.ok) throw new Error("Verification failed");
+      const data = await res.json();
+      console.log("OCR verification result:", data);
       
       if (data.success) {
-        setUploadedUrl(data.fileUrl);
         setOcrResult(data.data);
         setError("");
       } else {
-        setError(data.error || "Processing failed");
+        setError(data.error || "Verification failed");
       }
     } catch (err) {
       console.error(err);
-      setError("Upload and processing failed");
+      setError("Verification failed");
     } finally {
-      setLoading(false);
+      setVerifying(false);
     }
   }
 
@@ -51,7 +83,7 @@ export default function DocumentUploader() {
       setError("Please select a file");
       return;
     }
-    await uploadAndProcessFile(file, selectedOption);
+    await uploadFile(file, selectedOption);
   };
 
   return (
@@ -105,11 +137,12 @@ export default function DocumentUploader() {
         </div>
 
         <button type="submit" style={{ marginTop: "10px" }} disabled={loading}>
-          {loading ? "Processing..." : "Upload & Process"}
+          {loading ? "Uploading..." : "Upload"}
         </button>
       </form>
 
-      {loading && <p style={{ color: "blue" }}>Processing document...</p>}
+      {loading && <p style={{ color: "blue" }}>Uploading document...</p>}
+      {verifying && <p style={{ color: "blue" }}>Verifying document...</p>}
       {error && <p style={{ color: "red" }}>{error}</p>}
 
       {uploadedUrl && (
@@ -120,6 +153,26 @@ export default function DocumentUploader() {
           </a>
           <br />
           <img src={uploadedUrl} alt="Uploaded" style={{ maxWidth: "300px" }} />
+          
+          {/* Verify Button */}
+          <div style={{ marginTop: "15px" }}>
+            <button 
+              onClick={verifyDocument}
+              disabled={verifying}
+              style={{
+                padding: "10px 20px",
+                backgroundColor: "#28a745",
+                color: "white",
+                border: "none",
+                borderRadius: "5px",
+                cursor: verifying ? "not-allowed" : "pointer",
+                fontSize: "16px",
+                fontWeight: "bold"
+              }}
+            >
+              {verifying ? "Verifying..." : "🔍 Verify Document"}
+            </button>
+          </div>
         </div>
       )}
 

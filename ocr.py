@@ -168,11 +168,13 @@ for page in grouped.values():
                 if len(line) == 3:
                     words = [line[word_num]["text"] for word_num in sorted(line, key=lambda x: int(x))]
                     joined = ''.join(words).replace(' ', '')
+
                     if is_aadhaar_number(joined):
                         verification_result["document_type"] = "AADHAR"
                         verification_result["verified"] = True
                         verification_result["extracted_data"]["aadhaar_number"] = joined
                         aadhaar_found = True
+                        print("VERIFIED!! with aadhar")
                         break
                 
                 # INCOME TAX DEPARTMENT check
@@ -190,6 +192,7 @@ for page in grouped.values():
                         for word in words_in_line:
                             if len(word) == 10:
                                 if word[:5].isalpha() and word[5:9].isdigit():
+                                    print("VERIFIED! with PAN")
                                     verification_result["extracted_data"]["pan_number"] = word
             if aadhaar_found or pan_found:
                 break
@@ -200,6 +203,7 @@ for page in grouped.values():
 
 # Add verification result to main result
 result["verification"] = verification_result
+
 
 # Break if no elements found
 if not grouped:
