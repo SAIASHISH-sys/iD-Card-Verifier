@@ -1,0 +1,213 @@
+{
+  "source_file": "/home/sai-ashish-mishra/Documents/shaastrahack/Screenshot from 2025-09-13 23-18-16.pdf",
+  "page_count": 1,
+  "processed_page": 0,
+  "image_dimensions": {
+    "width": 1790,
+    "height": 1040
+  },
+  "sample_object": {
+    "page number": {
+      "block number": {
+        "paragraph number": {
+          "line number": {
+            "word number": {
+              "text": "SampleText",
+              "confidence": 99,
+              "bounding_box": {
+                "left": 100,
+                "top": 200,
+                "width": 50,
+                "height": 20
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "elements": {
+    "1": {
+      "1": {
+        "1": {
+          "1": {
+            "1": {
+              "text": "INCOME",
+              "confidence": 96,
+              "bounding_box": {
+                "left": 57,
+                "top": 158,
+                "width": 213,
+                "height": 56
+              }
+            },
+            "2": {
+              "text": "TAX",
+              "confidence": 96,
+              "bounding_box": {
+                "left": 285,
+                "top": 158,
+                "width": 101,
+                "height": 56
+              }
+            },
+            "3": {
+              "text": "DEPARTMENT",
+              "confidence": 96,
+              "bounding_box": {
+                "left": 401,
+                "top": 158,
+                "width": 350,
+                "height": 58
+              }
+            },
+            "5": {
+              "text": "GOVT.",
+              "confidence": 95,
+              "bounding_box": {
+                "left": 1153,
+                "top": 155,
+                "width": 217,
+                "height": 61
+              }
+            },
+            "6": {
+              "text": "OF",
+              "confidence": 95,
+              "bounding_box": {
+                "left": 1389,
+                "top": 154,
+                "width": 100,
+                "height": 60
+              }
+            },
+            "7": {
+              "text": "INDIA",
+              "confidence": 95,
+              "bounding_box": {
+                "left": 1504,
+                "top": 156,
+                "width": 213,
+                "height": 58
+              }
+            }
+          },
+          "2": {
+            "4": {
+              "text": "ATS",
+              "confidence": 70,
+              "bounding_box": {
+                "left": 975,
+                "top": 276,
+                "width": 105,
+                "height": 59
+              }
+            }
+          },
+          "3": {
+            "1": {
+              "text": "Permanent",
+              "confidence": 95,
+              "bounding_box": {
+                "left": 427,
+                "top": 355,
+                "width": 241,
+                "height": 45
+              }
+            },
+            "2": {
+              "text": "Account",
+              "confidence": 96,
+              "bounding_box": {
+                "left": 678,
+                "top": 355,
+                "width": 186,
+                "height": 45
+              }
+            },
+            "3": {
+              "text": "Number",
+              "confidence": 96,
+              "bounding_box": {
+                "left": 880,
+                "top": 355,
+                "width": 174,
+                "height": 45
+              }
+            },
+            "4": {
+              "text": "Card",
+              "confidence": 96,
+              "bounding_box": {
+                "left": 1068,
+                "top": 353,
+                "width": 103,
+                "height": 69
+              }
+            }
+          },
+          "4": {
+            "2": {
+              "text": "KYXPK0236D",
+              "confidence": 85,
+              "bounding_box": {
+                "left": 621,
+                "top": 422,
+                "width": 480,
+                "height": 62
+              }
+            }
+          }
+        }
+      },
+      "2": {
+        "1": {
+          "1": {
+            "2": {
+              "text": "/",
+              "confidence": 65,
+              "bounding_box": {
+                "left": 141,
+                "top": 622,
+                "width": 10,
+                "height": 34
+              }
+            },
+            "3": {
+              "text": "Name",
+              "confidence": 96,
+              "bounding_box": {
+                "left": 163,
+                "top": 621,
+                "width": 102,
+                "height": 36
+              }
+            }
+          },
+          "2": {
+            "1": {
+              "text": "SAMEER",
+              "confidence": 92,
+              "bounding_box": {
+                "left": 85,
+                "top": 671,
+                "width": 261,
+                "height": 50
+              }
+            },
+            "2": {
+              "text": "KUMAR",
+              "confidence": 96,
+              "bounding_box": {
+                "left": 367,
+                "top": 669,
+                "width": 227,
+                "height": 51
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

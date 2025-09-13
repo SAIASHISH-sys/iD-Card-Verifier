@@ -1,0 +1,582 @@
+{
+  "source_file": "/home/sai-ashish-mishra/Documents/Aadhar Sameer.pdf",
+  "page_count": 2,
+  "processed_page": 0,
+  "image_dimensions": {
+    "width": 1653,
+    "height": 2337
+  },
+  "total_elements": 38,
+  "elements": [
+    {
+      "text": "Sameer",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 548,
+        "top": 917,
+        "width": 153,
+        "height": 32
+      },
+      "page_number": 1,
+      "block_number": 2,
+      "paragraph_number": 1,
+      "line_number": 2,
+      "word_number": 1
+    },
+    {
+      "text": "Kumar",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 715,
+        "top": 917,
+        "width": 127,
+        "height": 31
+      },
+      "page_number": 1,
+      "block_number": 2,
+      "paragraph_number": 1,
+      "line_number": 2,
+      "word_number": 2
+    },
+    {
+      "text": "wa",
+      "confidence": 65,
+      "bounding_box": {
+        "left": 546,
+        "top": 967,
+        "width": 70,
+        "height": 28
+      },
+      "page_number": 1,
+      "block_number": 2,
+      "paragraph_number": 1,
+      "line_number": 3,
+      "word_number": 1
+    },
+    {
+      "text": "10/12/2006",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 834,
+        "top": 961,
+        "width": 219,
+        "height": 34
+      },
+      "page_number": 1,
+      "block_number": 2,
+      "paragraph_number": 1,
+      "line_number": 3,
+      "word_number": 3
+    },
+    {
+      "text": "MALE",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 660,
+        "top": 1011,
+        "width": 98,
+        "height": 32
+      },
+      "page_number": 1,
+      "block_number": 3,
+      "paragraph_number": 1,
+      "line_number": 1,
+      "word_number": 2
+    },
+    {
+      "text": "ar",
+      "confidence": 65,
+      "bounding_box": {
+        "left": 1350,
+        "top": 1083,
+        "width": 41,
+        "height": 53
+      },
+      "page_number": 1,
+      "block_number": 3,
+      "paragraph_number": 1,
+      "line_number": 2,
+      "word_number": 9
+    },
+    {
+      "text": "Aadhaar",
+      "confidence": 92,
+      "bounding_box": {
+        "left": 567,
+        "top": 1246,
+        "width": 139,
+        "height": 45
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 1,
+      "word_number": 1
+    },
+    {
+      "text": "is",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 720,
+        "top": 1251,
+        "width": 35,
+        "height": 28
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 1,
+      "word_number": 2
+    },
+    {
+      "text": "proof",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 769,
+        "top": 1246,
+        "width": 91,
+        "height": 45
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 1,
+      "word_number": 3
+    },
+    {
+      "text": "of",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 874,
+        "top": 1246,
+        "width": 35,
+        "height": 45
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 1,
+      "word_number": 4
+    },
+    {
+      "text": "identity,",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 923,
+        "top": 1246,
+        "width": 150,
+        "height": 45
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 1,
+      "word_number": 5
+    },
+    {
+      "text": "not",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 1092,
+        "top": 1246,
+        "width": 49,
+        "height": 45
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 1,
+      "word_number": 6
+    },
+    {
+      "text": "of",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 1155,
+        "top": 1246,
+        "width": 35,
+        "height": 45
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 1,
+      "word_number": 7
+    },
+    {
+      "text": "citizenship",
+      "confidence": 95,
+      "bounding_box": {
+        "left": 1204,
+        "top": 1246,
+        "width": 200,
+        "height": 45
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 1,
+      "word_number": 8
+    },
+    {
+      "text": "or",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 570,
+        "top": 1304,
+        "width": 39,
+        "height": 22
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 2,
+      "word_number": 1
+    },
+    {
+      "text": "date",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 619,
+        "top": 1297,
+        "width": 79,
+        "height": 29
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 2,
+      "word_number": 2
+    },
+    {
+      "text": "of",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 708,
+        "top": 1296,
+        "width": 37,
+        "height": 30
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 2,
+      "word_number": 3
+    },
+    {
+      "text": "birth.",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 756,
+        "top": 1297,
+        "width": 95,
+        "height": 29
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 2,
+      "word_number": 4
+    },
+    {
+      "text": "It",
+      "confidence": 89,
+      "bounding_box": {
+        "left": 866,
+        "top": 1299,
+        "width": 22,
+        "height": 27
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 2,
+      "word_number": 5
+    },
+    {
+      "text": "should",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 900,
+        "top": 1297,
+        "width": 116,
+        "height": 30
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 2,
+      "word_number": 6
+    },
+    {
+      "text": "be",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 1030,
+        "top": 1298,
+        "width": 42,
+        "height": 30
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 2,
+      "word_number": 7
+    },
+    {
+      "text": "used",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 1085,
+        "top": 1299,
+        "width": 82,
+        "height": 29
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 2,
+      "word_number": 8
+    },
+    {
+      "text": "with",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 1180,
+        "top": 1299,
+        "width": 77,
+        "height": 29
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 2,
+      "word_number": 9
+    },
+    {
+      "text": "verification",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 1270,
+        "top": 1299,
+        "width": 198,
+        "height": 30
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 2,
+      "word_number": 10
+    },
+    {
+      "text": "(online",
+      "confidence": 95,
+      "bounding_box": {
+        "left": 1481,
+        "top": 1299,
+        "width": 121,
+        "height": 35
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 2,
+      "word_number": 11
+    },
+    {
+      "text": "authentication,",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 570,
+        "top": 1344,
+        "width": 264,
+        "height": 33
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 3,
+      "word_number": 1
+    },
+    {
+      "text": "or",
+      "confidence": 95,
+      "bounding_box": {
+        "left": 847,
+        "top": 1352,
+        "width": 36,
+        "height": 21
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 3,
+      "word_number": 2
+    },
+    {
+      "text": "scanning",
+      "confidence": 95,
+      "bounding_box": {
+        "left": 895,
+        "top": 1347,
+        "width": 154,
+        "height": 34
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 3,
+      "word_number": 3
+    },
+    {
+      "text": "of",
+      "confidence": 95,
+      "bounding_box": {
+        "left": 1061,
+        "top": 1345,
+        "width": 37,
+        "height": 30
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 3,
+      "word_number": 4
+    },
+    {
+      "text": "QR",
+      "confidence": 95,
+      "bounding_box": {
+        "left": 1108,
+        "top": 1347,
+        "width": 51,
+        "height": 31
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 3,
+      "word_number": 5
+    },
+    {
+      "text": "code",
+      "confidence": 93,
+      "bounding_box": {
+        "left": 1172,
+        "top": 1347,
+        "width": 85,
+        "height": 29
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 3,
+      "word_number": 6
+    },
+    {
+      "text": "/",
+      "confidence": 92,
+      "bounding_box": {
+        "left": 1268,
+        "top": 1346,
+        "width": 17,
+        "height": 34
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 3,
+      "word_number": 7
+    },
+    {
+      "text": "offline",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 1296,
+        "top": 1346,
+        "width": 112,
+        "height": 30
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 3,
+      "word_number": 8
+    },
+    {
+      "text": "XML).",
+      "confidence": 95,
+      "bounding_box": {
+        "left": 1421,
+        "top": 1346,
+        "width": 99,
+        "height": 35
+      },
+      "page_number": 1,
+      "block_number": 4,
+      "paragraph_number": 1,
+      "line_number": 3,
+      "word_number": 9
+    },
+    {
+      "text": "5569",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 522,
+        "top": 1492,
+        "width": 164,
+        "height": 54
+      },
+      "page_number": 1,
+      "block_number": 6,
+      "paragraph_number": 1,
+      "line_number": 1,
+      "word_number": 1
+    },
+    {
+      "text": "4552",
+      "confidence": 95,
+      "bounding_box": {
+        "left": 709,
+        "top": 1479,
+        "width": 169,
+        "height": 68
+      },
+      "page_number": 1,
+      "block_number": 6,
+      "paragraph_number": 1,
+      "line_number": 1,
+      "word_number": 2
+    },
+    {
+      "text": "0826",
+      "confidence": 96,
+      "bounding_box": {
+        "left": 900,
+        "top": 1493,
+        "width": 166,
+        "height": 55
+      },
+      "page_number": 1,
+      "block_number": 6,
+      "paragraph_number": 1,
+      "line_number": 1,
+      "word_number": 3
+    },
+    {
+      "text": "AH",
+      "confidence": 86,
+      "bounding_box": {
+        "left": 823,
+        "top": 1570,
+        "width": 148,
+        "height": 53
+      },
+      "page_number": 1,
+      "block_number": 6,
+      "paragraph_number": 1,
+      "line_number": 2,
+      "word_number": 3
+    }
+  ]
+}
